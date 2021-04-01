@@ -2,7 +2,7 @@
 # tasks file for instance_prov
 - name: "Launching a Master node"
   amazon.aws.ec2:
-    key_name: "Hadoop_Arth_key"
+    key_name: "key"
     region: "ap-south-1"
     instance_type: "t2.micro"
     image: "ami-08e0ca9924195beba"
@@ -17,7 +17,7 @@
     aws_secret_key: "{{ aws_secret_key }}"
 - name: "Launching two slave nodes"
   amazon.aws.ec2:
-    key_name: "Hadoop_Arth_key"
+    key_name: "key"
     region: "ap-south-1"
     instance_type: "t2.micro"
     image: "ami-08e0ca9924195beba"
